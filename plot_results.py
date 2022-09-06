@@ -4,9 +4,9 @@ from matplotlib import pyplot as plt
 import json
 
 
-def read_data():
+def read_data(file):
     data = []
-    with open("results_closed_network.json") as rfile:
+    with open(file) as rfile:
         rjson = rfile.read()
         rdata = json.loads(rjson)
         intervals = rdata["intervals"]
@@ -23,7 +23,7 @@ def plot(data):
 
 
 def main():
-    data = read_data()
+    data = read_data("results_closed_network.json")
     plot(data)
 
 

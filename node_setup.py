@@ -42,6 +42,6 @@ compute = chi.server.create_server(
     key_name="Test_ssh"
 )
 
-hserv_start = chi.server.wait_for_active(head_lease['id'])
-cserv_start = chi.server.wait_for_active(compute_lease['id'])
-chi.server.associate_floating_ip(head_node['id'])
+hserv_start = chi.server.wait_for_active(head.id)
+cserv_start = chi.server.wait_for_active(compute.id)
+chi.server.associate_floating_ip(head.id)

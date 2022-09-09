@@ -17,6 +17,7 @@ def read_data(file):
 
 def plot(data):
     plt.plot(data)
+    plt.title("iperf3 bandwith test on shared network")
     plt.xlabel("interval number")
     plt.ylabel("bits per second")
     plt.show()
